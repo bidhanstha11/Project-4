@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreArt - Official Website</title>
+
+    <!-----------Google Fonts---------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+
+    <!------------Font awesome icons-------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    *{
+        font-family: 'Righteous';
+        box-sizing: border-box;
+    }
+    
+    p{
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .header{
+        background-position: center;
+        min-height: 100vh;;
+        background-size: cover;
+        box-sizing: border-box;
+    }
+
+    #header-text{
+        font-family: 'Righteous';
+    }
+
+    nav{
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+    }
+/*-------logo----------*/
+
+#logo{
+    padding-right: 5%;
+}
+
+/* ---------Menu Bar--------- */
+
+    .menu{
+        flex: 1;
+        text-align: left;
+    }
+    .menu ul li{
+        list-style: none;
+        padding: 8px 12px;
+        font-size: 15px;
+        padding: 10px;
+        display: inline-block;
+    }
+    .menu ul li a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .menu ul li a:active{
+        color: red;
+    }
+    
+    .menu a::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        background: rgb(0, 0, 0);
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .menu a:hover::after{
+        width: 100%;
+    }
+
+/* ---------audio and video--------- */
+
+    .home video{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .audio{
+        margin-top: 550px;
+    }
+    .home audio{
+        opacity: 40%;
+    }
+
+/* ---------text in header--------- */
+
+    .text-box{
+        width: 90%;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center; 
+    }
+    .text-box h1{
+        font-size: 40px;
+    }
+    .text-box p{
+        margin: 10px 0 40px;
+        font-size: 25px;
+    }
+
+/* ---------Button for header--------- */
+
+    .button{
+        display: inline-block;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
+        padding: 10px;
+        font-size: 20px;
+        background: transparent;
+        position: relative;
+        margin: 5px;
+    }
+    .button:hover{
+        border: 1px solid rgb(174, 174, 174);
+        background: rgb(206, 0, 0);
+    }
+
+/* ---------font awesome--------- */
+
+    nav .fa{
+        display: none;
+    }
+
+/*------Categories-----*/
+
+.category{
+    padding: 20px;
+    text-align: center;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  height: 33.3%;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
+.column img{
+width: 100%;
+}
+
+.column:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*-------Category text-------*/
+
+#paint{
+    color: rgb(110, 0, 0);
+}
+
+#digital{
+    color: rgb(0, 80, 0);
+}
+
+#prints{
+    color: rgb(0, 0, 135);
+}
+
+/*----------Feedback----------*/
+
+.feedback{
+    min-height: 40vh;
+    margin: auto;
+    width: 100%;
+    background: url(media/background.jpeg);
+}
+
+.feedback form{
+    text-align: center;
+    width: 100%;
+    padding: 25px 25px;
+}
+
+form input{
+    width: 100%;
+    height: 50px;
+    margin: 4px 0;
+    border: 1px solid #5c5c5c;
+    border-radius: 3px;
+    background: rgb(215, 215, 215);
+    padding: 0 15px;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/*effect*/
+form input:hover,
+form textarea:hover{
+    border: 1px solid rgb(0, 0, 0);
+    color: black;
+    transition: all 0.3s ease; 
+}
+form input:hover::placeholder,
+form textarea:hover::placeholder{
+    padding-left: 5px;
+    color: black;
+    transition: all 0.3s ease; 
+}
+
+form textarea{
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid #5c5c5c;
+    border-radius: 3px;
+    background: rgb(215, 215, 215);
+}
+
+/* ---------footer section--------- */
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        margin: 2%;
+    }
+
+    .footer-menu ol li{
+        list-style: none;
+    }
+
+    .footer-menu ol li a{
+        color: rgb(2, 1, 1);
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    #footer-paragraph{
+        text-align: center;
+    }
+
+    /*social media*/
+
+    .social-links{
+        text-align: center;
+        margin: 50px;
+    }
+    .social-links a{
+       margin: 30px;
+        color: rgba(0, 0, 0);
+    }
+    .social-links .fa{
+        font-size: 30px;
+    }
+/* ---------Responsive Media (Small screen)--------- */
+
+    @media(max-width:700px){
+        .text-box h1{
+            font-size: 30px;
+        }
+
+        .text-box p{
+            font-size: 20px;
+        }
+
+        .menu ul li {
+            display: block;
+            float: none;
+        }
+
+        .menu{
+            position: fixed;
+            background: #fff;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 0.5s;
+        }
+    
+        nav .fa{
+            display: block;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        
+    }
+
+    </style>
+
+</head>
+<body>
+        <section class="header">
+            <nav>
+                <a href="home.html" id="logo"><img src="media/creartlogo.png" alt="CreArt" width="150px" height="100%"></a>
+            <div class="menu" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html"><b>HOME</b></a></li>
+                    <li><a href="limited.html"><b>LIMITED</b></a></li>
+                    <li><a href="collaboration.html"><b>COLLABORATION</b></a></li>
+                    <li><a href="expenses.html"><b>EXPENSES</b></a></li>
+                    <li><a href="account.html"><b>ACCOUNT</b></a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <section class="home">
+                <video src="media/website.mp4" autoplay muted loop></video>
+                <audio controls class="audio" src="media/melody.mp3"></audio>
+            </section>
+    
+            <div class="text-box">
+                <h1>CreArt Shop</h1>
+                <p id="header-text">"I was one of you then I got an idea of starting up a new business of buying and selling arts conveniently"</p>
+                <a href="https://youtu.be/cccFwF71BXE" class="button" target="_blank">Watch Video</a><br>
+            </div>
+        </div>
+        </section>
+
+<!-------------Categories--------->
+
+ <section class="category">
+    <h2>Categories</h2>
+    <p>You can choose your category here:</p>
+    
+    <div class="row">
+      <div class="column">
+        <a href="painting.html"><img src="media/painting.jpg" alt="painting section"></a>
+        <div class="layer" id="paint">
+            <h3>PAINTING</h3>
+        </div>
+      </div>
+
+      <div class="column">
+        <a href="digital.html"><img src="media/digital.jpg" alt="digital section"></a>
+        <div class="layer" id="digital">
+            <h3>DIGITAL</h3>
+        </div>
+      </div>
+
+      <div class="column">
+        <a href="prints.html"><img src="media/prints.jpg" alt="prints section"></a>
+        <div class="layer" id="prints">
+            <h3>PRINTS</h3>
+        </div>
+      </div>
+    </div>
+ </section>
+
+ <!---------------Feedback Section------------>
+<section>
+    <div class="feedback">
+        <form action="thankyou.html" autocomplete="off">
+            <h1>Give Your Feedback</h1>
+            <h4>You can also call us directly at <u>(+977)9818235231</u></h4>
+   
+            <div class="user">
+                <input type="text" required placeholder="Full Name"><br><br>
+            </div>
+   
+            <div class="user">
+               <input type="email" required placeholder="Email Adress"><br><br>
+           </div>
+   
+           <textarea cols="15" rows="10" required placeholder="Your message here..."></textarea><br><br>
+   
+           <button>Send</button>
+        </form>
+    </div>
+</section><br>
+
+<!-----------------Footer menu------------>
+
+<div class="footer"> <!--footer div start-->
+    
+    <div class="footer-menu">
+        <ol>
+            <li><a><b>For Customers</b></a></li><br>
+            <li><a href="aboutus.html">About Us</a></li><br>
+            <li><a href="qanda.html" title="Q&A - CreArt">Questions And Answers</a></li><br>
+        </ol>
+    </div>
+
+    <div class="footer-menu">
+        <ol>
+            <li><a><b>Information</b></a></li><br>
+            <li><a href="payment.html">Payment</a></li><br>
+            <li><a href="delivery.html">Delivery</a></li><br>
+            <li><a href="return.html">Return</a></li><br>
+        </ol>
+    </div>
+
+    <div class="footer-menu">
+        <ol>
+            <li><a><b>Contacts</b></a></li><br>
+            <li><a href="tel:+9779818235231">Tel: +9779818235231</a></li><br>
+            <li><a href="mailto:shresthabidhan11@gmail.com">Email: shresthabidhan11@gmail.com</a></li><br>
+            <li><a href="https://www.google.com/maps/place/White+roses+But+the+guest+house/@27.7353653,85.3093423,20z/data=!4m12!1m6!3m5!1s0x39eb18dc193a2d8f:0xa0a580a825c16a24!2sGongabu+New+Bus+Station+Parking!8m2!3d27.732436!4d85.3081285!3m4!1s0x39eb18d944729b43:0xd08f43b096276429!8m2!3d27.7353374!4d85.3094271?hl=en">New Buspark, Kathmandu</a></li><br>
+        </ol>
+    </div>
+
+    </div> <!--footer div end-->
+
+    <hr>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/CreArt77Personal" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/CreartPersonal" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/_artonstock_/" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+
+<p id="footer-paragraph">&copy;Creart Shop 2021, All Rights Reserved</p>
+
+     <!-----------------Javascript for menu-------->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
